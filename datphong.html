@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/logo.png">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/datphong.css">
+</head>
+
+<body>
+    <div id="datphong" class="section">
+        <div class="section-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="datphong-cta">
+                            <h1 class="gradient-text">Booking</h1>
+                            <h3>Discover the world with TravelWithU and our top-notch travel tours.</h3>
+                            <p>
+                                Book your journey today and experience unforgettable memories with our team of travel experts. 
+                                Embark on an incredible adventure with reliable service and absolute convenience.
+                            </p>
+                            <div class="contact__map">
+			                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15342.933584393664!2d108.252355!3d15.9752931!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142108997dc971f%3A0x1295cb3d313469c9!2sVietnam%20-%20Korea%20University%20of%20Information%20and%20Communication%20Technology.!5e0!3m2!1sen!2s!4v1680190266963!5m2!1sen!2s" 
+                                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    		                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="datphong-form">
+                            <form style="font-size: 15px;">
+                                <div class="form-group">
+                                    <span class="form-label">Full Name</span>
+                                    <input class="form-control" type="text" placeholder="First Name and Last Name" required autofocus>
+                                    <span class="form-label">Email</span>
+                                    <input class="form-control" type="text" placeholder="Email - example: abc@gmail.com" required>
+                                    <span class="form-label">Destination</span>
+                                    <select class="form-control" required>
+                                        <option>Malaysia</option>
+                                        <option>Thailand</option>
+                                        <option>Maldives</option>
+                                        <option>Japan</option>
+                                        <option>Italy</option>
+                                        <option>Greece</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <span class="form-label">Check In</span>
+                                            <input class="form-control" type="date" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <span class="form-label">Check out</span>
+                                            <input class="form-control" type="date" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <span class="form-label">Rooms</span>
+                                            <select class="form-control" required>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                            <span class="select-arrow"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <span class="form-label">Adults</span>
+                                            <select class="form-control" required>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                            <span class="select-arrow"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <span class="form-label">Children</span>
+                                            <select class="form-control" required>
+                                                <option>0</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                            </select>
+                                            <span class="select-arrow"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-btn d-flex justify-content-center align-items-center">
+                                    <input type="button" id="btn" value="BOOK NOW">
+                                    <script language="javascript">
+                                        var button = document.getElementById("btn");
+                                        button.onclick = function () {
+                                            alert("You have successfully registered. Please wait for a response from the email.");
+                                        }
+                                    </script>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

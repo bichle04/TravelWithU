@@ -1,0 +1,168 @@
+:root {
+--ff-abril-fatface: 'Abril Fatface', cursive;
+}
+
+html,body {
+	height: 100%;
+}
+
+.section {
+    position: relative;
+    height: 100vh;
+}
+
+.section .section-center {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.container {
+    background-color: white; 
+    border-radius: 15px;
+}
+
+#datphong {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../img/bg-booking.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#datphong::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.datphong-form {
+    padding: 50px 20px;
+}
+
+.datphong-form .form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.datphong-form .form-control {
+    background-color: white;
+    border-radius: 4px;
+    border-width: 2.3px;
+    border-color: forestgreen;
+    height: 40px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: rgb(67, 68, 69);
+    font-size: 14px;
+}
+
+.datphong-form .form-control::-webkit-input-placeholder {
+    color: rgb(67, 68, 69);
+}
+
+.datphong-form .form-control:-ms-input-placeholder {
+    color: rgb(67, 68, 69);
+}
+
+.datphong-form .form-control::placeholder {
+    color: rgb(67, 68, 69);
+}
+
+.bodatphongoking-form input[type="date"].form-control:invalid {
+    color: rgba(62, 72, 92, 0.3);
+}
+
+.datphong-form select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.datphong-form select.form-control+.select-arrow {
+    position: absolute;
+    right: 0px;
+    bottom: 4px;
+    width: 32px;
+    line-height: 32px;
+    height: 32px;
+    text-align: center;
+    pointer-events: none;
+    color: rgba(62, 72, 92, 0.3);
+    font-size: 14px;
+}
+
+.datphong-form select.form-control+.select-arrow:after {
+    content: '\279C';
+    display: block;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.datphong-form .form-label {
+    display: inline-block;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 6px;
+    margin-left: 7px;
+}
+
+.form-btn input[type="button"]{
+    padding: 7px 50px;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(60deg, #016B60, #029485, #87FD80, #c0efb0);;
+    color: white;
+    font-weight: 900;
+}
+
+.datphong-cta {
+    margin: 20px 0;
+}
+
+.datphong-cta h1.gradient-text{
+    background-image: linear-gradient(to right, #016B60, #029485, #87FD80, #D9FDCD);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 52px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+
+.datphong-cta h3 {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: var(--ff-abril-fatface);
+    font-size: 30px;
+    color: black;
+    font-weight: 700;
+}
+
+.datphong-cta p {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 20px;
+    font-size: 18px;
+    color: black;
+}
+
+.datphong-cta .contact__map {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.datphong-cta .contact__map iframe {
+    width: 70%;
+    height: 250px;
+    border-radius: 5px;
+}
