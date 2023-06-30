@@ -33,12 +33,12 @@
                     </div>
                     <div class="col-md-5">
                         <div class="datphong-form">
-                            <form style="font-size: 15px;">
+                            <form method="get" style="font-size: 15px;">
                                 <div class="form-group">
                                     <span class="form-label">Full Name</span>
                                     <input class="form-control" type="text" placeholder="First Name and Last Name" required autofocus>
                                     <span class="form-label">Email</span>
-                                    <input class="form-control" type="text" placeholder="Email - example: abc@gmail.com" required>
+                                    <input class="form-control" type="email" placeholder="Email - example: abc@gmail.com" required>
                                     <span class="form-label">Destination</span>
                                     <select class="form-control" required>
                                         <option>Malaysia</option>
@@ -100,13 +100,7 @@
                                     </div>
                                 </div>
                                 <div class="form-btn d-flex justify-content-center align-items-center">
-                                    <input type="button" id="btn" value="BOOK NOW">
-                                    <script language="javascript">
-                                        var button = document.getElementById("btn");
-                                        button.onclick = function () {
-                                            alert("You have successfully registered. Please wait for a response from the email.");
-                                        }
-                                    </script>
+                                    <input type="submit" id="btn-book" value="BOOK NOW">
                                 </div>
                             </form>
                         </div>
@@ -116,6 +110,8 @@
         </div>
     </div>
 
+    <script src="./assets/js/script.js"></script>
+    
 </body>
 
 </html>

@@ -57,7 +57,6 @@ function scrollFunction() {
     } else {
         document.getElementById("myBtn").style.display = "none";            // Ngược lại, ẩn button
     }
-
 }
 
 // Khi người dùng nhấp chuột vào button, cuộn lên đầu trang một cách mượt (smooth)
@@ -85,7 +84,7 @@ $(function () {
 
 
         $this.wrap($("<div/>", {                    // Bọc phần tử $this bằng một thẻ <div> mới,              
-            style: 'position:relative',             // với thuộc tính style và id đã được xác định.
+            style: 'position : relative',             // với thuộc tính style và id đã được xác định.
             id: id
         }));
 
@@ -152,4 +151,29 @@ $(function () {
 });
 
 
+/**
+ * CHECK INPUT & SHOW NOTIFICATION
+ */
 
+var form = document.querySelector(".datphong-form");
+form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Ngăn chặn gửi biểu mẫu mặc định
+
+    // Kiểm tra các trường đầu vào
+    var fullName = document.querySelector("input[type='text']").value;
+    var email = document.querySelector("input[type='email']").value;
+    var destination = document.querySelector("select").value;
+    var checkInDate = document.querySelector("input[type='date']:nth-of-type(1)").value;
+    var checkOutDate = document.querySelector("input[type='date']:nth-of-type(2)").value;
+    var rooms = document.querySelector("select:nth-of-type(1)").value;
+    var adults = document.querySelector("select:nth-of-type(2)").value;
+    var children = document.querySelector("select:nth-of-type(3)").value;
+
+    // Kiểm tra điều kiện
+    if (fullName !== "" && email !== "" && destination !== "" && checkInDate !== "" && checkOutDate !== "" && rooms !== "" && adults !== "") {
+        // Hiển thị thông báo
+        alert("You have successfully registered. Please wait for a response from the email.");
+    } else {
+        alert("Please fill in all the required fields.");
+    }
+});
