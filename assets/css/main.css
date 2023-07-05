@@ -8,6 +8,7 @@
   font-style: italic;
 }
 
+/************************ HEADER ************************/
 .navbar {
   position: absolute;
   top: 0;
@@ -30,6 +31,7 @@
   width: 100%;
 }
 
+/************************ MENU ************************/
 .navbar__list {
   padding-left: 0;
   display: flex;
@@ -50,124 +52,22 @@
   padding: 8px;
 }
 
-.navbar__subnav {
-  padding-left: 0;
-  list-style: none;
-  box-shadow: 0 0 2px #ccc;
-  position: absolute;
-  top: calc(100% + 10px);
-  display: none;
-  -webkit-animation: fadeIn ease-in 0.2s;
-  animation: fadeIn ease-in 0.2s;
-}
-
-.navbar__item > .navbar__subnav::before {
-  content: "";
-  width: 100%;
-  height: 20px;
-  position: absolute;
-  top: -20px;
-}
-
-.navbar__item:hover > .navbar__subnav {
-  display: block;
-}
-
-.subnav__item:not(:first-child) {
-  border-top: 1px solid #f1f1f1;
-}
-
-.subnav__item-link {
-  --height: 40px;
-  text-decoration: none;
-  font-size: 1.6rem;
-  text-transform: capitalize;
-  color: var(--text-color);
-  display: block;
-  background-color: var(--white-color);
-  min-width: 180px;
-  padding-left: 16px;
-  min-height: var(--height);
-  line-height: var(--height);
-  font-weight: 500;
-  position: relative;
-}
-
-.subnav__item-link:hover {
-  background-color: #f9f9f9;
-}
-
-.subnav__item {
-  position: relative;
-}
-
-.subnav__item--new::after,
-.subnav__item--best::after,
-.subnav__item--hot::after {
-  text-transform: uppercase;
-  color: var(--white-color);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 16px;
-  padding: 2px 4px;
-  border-radius: 4px;
-  letter-spacing: 1px;
-}
-
-.subnav__item--hot::after {
-  content: "HOT";
-  background-color: var(--red-color);
-}
-
-.subnav__item--has-menu::after {
-  content: "";
-  border: 6px solid;
-  border-color: transparent transparent transparent #9a9a9a;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 16px;
-}
-
-.subnav__item--has-menu:hover > .subnav__menu {
-  display: block;
-}
-
-.subnav__menu {
-  position: absolute;
-  top: 0;
-  left: calc(100% + 16px);
-  list-style: none;
-  padding-left: 0;
-  box-shadow: 0 0 2px #ccc;
-  display: none;
-  -webkit-animation: fadeIn ease-in 0.2s;
-  animation: fadeIn ease-in 0.2s;
-}
-
-.subnav__menu::before {
-  content: "";
-  height: 100%;
-  width: 20px;
-  position: absolute;
-  top: 0;
-  left: -16px;
-}
-
-.subnav__item--best::after {
-  content: "best";
-  background-color: var(--blue-color);
-}
-
-.subnav__item--new::after {
-  content: "new";
-  background-color: var(--green-color);
+.navbar__item > .navbar__item-link:hover {
+  text-decoration: underline;
 }
 
 .navbar__item--booking {
   background-color: var(--purple-color);
   border-radius: 100px;
+}
+
+.navbar__item--booking > .navbar__item-link:hover{
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar__item > .navbar__item-link i:hover {
+  transform: scaleX(-1);
 }
 
 .navbar__menu-icon {
@@ -216,6 +116,7 @@
   cursor: pointer;
 }
 
+/************************ Packages in menu ************************/
 .package-menu {
   padding: 24px 0;
 }
@@ -313,6 +214,7 @@
   background-image: var(--background-color);
 }
 
+/************************ MENU FOR MOBILE (Show narbar) ************************/
 .mobile-menu__overlay {
   position: fixed;
   top: 0;
@@ -380,6 +282,7 @@
   margin: 8px 0;
 }
 
+/************************ PACKAGES ************************/
 .package {
   position: relative;
   margin: 12px 0;
@@ -512,6 +415,7 @@
   text-decoration: none;
 }
 
+/************************ SEARCH ************************/
 .search {
   width: 100vw;
   position: relative;
@@ -639,6 +543,7 @@
   letter-spacing: 2px;
 }
 
+/************************ BANNER ************************/
 .banner {
   margin: 32px 0;
   display: flex;
@@ -693,6 +598,7 @@
   border-radius: 1000px;
 }
 
+/************************ SPECIAL (ABOUT) ************************/
 .special-info {
   height: 408px;
   display: flex;
@@ -861,6 +767,7 @@
   color: var(--blue-color);
 }
 
+/************************ TOURS ************************/
 .tour {
   margin-bottom: 24px;
   box-shadow: 0 0px 5px 1px rgb(0 0 0 / 10%);
@@ -1030,6 +937,7 @@
   
 }
 
+/************************ BUTTON GO TO TOP ************************/
 #myBtn {
   display: none;
   position: fixed;
@@ -1050,6 +958,7 @@
   background-color: #555;
 }
 
+/************************ FOOTER ************************/
 .footer {
   background-image: url(../img/footer-bg.jpg);
   background-position: center;
