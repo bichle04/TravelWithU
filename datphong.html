@@ -8,7 +8,9 @@
     <title>Booking</title>
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/logo.png">
     <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/datphong.css">
 </head>
 
@@ -22,13 +24,16 @@
                             <h1 class="gradient-text">Booking</h1>
                             <h3>Discover the world with TravelWithU and our top-notch travel tours.</h3>
                             <p>
-                                Book your journey today and experience unforgettable memories with our team of travel experts. 
+                                Book your journey today and experience unforgettable memories with our team of travel
+                                experts.
                                 Embark on an incredible adventure with reliable service and absolute convenience.
                             </p>
                             <div class="contact__map">
-			                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15342.933584393664!2d108.252355!3d15.9752931!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142108997dc971f%3A0x1295cb3d313469c9!2sVietnam%20-%20Korea%20University%20of%20Information%20and%20Communication%20Technology.!5e0!3m2!1sen!2s!4v1680190266963!5m2!1sen!2s" 
-                                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    		                </div>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15342.933584393664!2d108.252355!3d15.9752931!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142108997dc971f%3A0x1295cb3d313469c9!2sVietnam%20-%20Korea%20University%20of%20Information%20and%20Communication%20Technology.!5e0!3m2!1sen!2s!4v1680190266963!5m2!1sen!2s"
+                                    allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-5">
@@ -36,9 +41,11 @@
                             <form method="get" style="font-size: 15px;">
                                 <div class="form-group">
                                     <span class="form-label">Full Name</span>
-                                    <input class="form-control" type="text" placeholder="First Name and Last Name" required autofocus>
+                                    <input class="form-control" type="text" placeholder="First Name and Last Name"
+                                        required autofocus>
                                     <span class="form-label">Email</span>
-                                    <input class="form-control" type="email" placeholder="Email - example: abc@gmail.com" required>
+                                    <input class="form-control" type="email"
+                                        placeholder="Email - example: abc@gmail.com" required>
                                     <span class="form-label">Destination</span>
                                     <select class="form-control" required>
                                         <option>Malaysia</option>
@@ -110,8 +117,29 @@
         </div>
     </div>
 
-    <script src="./assets/js/script.js"></script>
-    
+    <!-- <script src="./assets/js/script.js"></script> -->
+    <script>
+        var form = document.querySelector(".form-btn");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Ngăn chặn gửi biểu mẫu mặc định
+
+            // Kiểm tra các trường đầu vào
+            var fullName = document.querySelector("input[type='text']").value;
+            var email = document.querySelector("input[type='email']").value;
+            var destination = document.querySelector("select").value;
+            var checkInDate = document.querySelector("input[type='date']:nth-of-type(1)").value;
+            var checkOutDate = document.querySelector("input[type='date']:nth-of-type(2)").value;
+            var rooms = document.querySelector("select:nth-of-type(1)").value;
+            var adults = document.querySelector("select:nth-of-type(2)").value;
+            var children = document.querySelector("select:nth-of-type(3)").value;
+
+            // Kiểm tra điều kiện
+            if (fullName !== "" && email !== "" && destination !== "" && checkInDate !== "" && checkOutDate !== "" && rooms !== "" && adults !== "") {
+                // Hiển thị thông báo
+                alert("You have successfully registered. Please wait for a response from the email.");
+            }
+        });
+    </script>
 </body>
 
 </html>
