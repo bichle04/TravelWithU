@@ -5,24 +5,24 @@
  */
 
 // Lắng nghe sự kiện nhấp chuột trên các liên kết trong thanh điều hướng
-document.addEventListener('DOMContentLoaded', function () {             // 'DOMContentLoaded' để chắc chắn rằng tất cả các phần tử trên trang đã được tải xong
-    var navLinks = document.querySelectorAll('.navbar__item-link, .mobile-menu__item-link');     // Lấy tất cả các liên kết trong thanh điều hướng
+// document.addEventListener('DOMContentLoaded', function () {             // 'DOMContentLoaded' để chắc chắn rằng tất cả các phần tử trên trang đã được tải xong
+//     var navLinks = document.querySelectorAll('.navbar__item-link, .mobile-menu__item-link');     // Lấy tất cả các liên kết trong thanh điều hướng
 
-    for (var i = 0; i < navLinks.length; i++) {                         // Duyệt qua từng liên kết và gắn sự kiện click để cuộn đến phần tử tương ứng
-        if (navLinks[i].getAttribute('href') === 'datphong.html') {
-            navLinks[i].addEventListener('click', function () {         // Kiểm tra nếu liên kết có href là "datphong.html"
-                window.location.href = 'datphong.html';                 // thì chuyển hướng trang khi nhấp chuột vào liên kết.
-            });
-        } else if (navLinks[i].getAttribute('href') === './LOGIN/login.html') {     // Kiểm tra nếu liên kết có href là "./LOGIN/login.html"
-            navLinks[i].addEventListener('click', function () {                     // thì chuyển hướng trang khi nhấp chuột vào liên kết.
-                window.location.href = './LOGIN/login.html';
-            });
-        } else {
-            // Thực hiện cuộn đến phần tử tương ứng khi nhấp chuột vào các liên kết khác
-            navLinks[i].addEventListener('click', scrollToSection);
-        }
-    }
-});
+//     for (var i = 0; i < navLinks.length; i++) {                         // Duyệt qua từng liên kết và gắn sự kiện click để cuộn đến phần tử tương ứng
+//         if (navLinks[i].getAttribute('href') === 'datphong.html') {
+//             navLinks[i].addEventListener('click', function () {         // Kiểm tra nếu liên kết có href là "datphong.html"
+//                 window.location.href = 'datphong.html';                 // thì chuyển hướng trang khi nhấp chuột vào liên kết.
+//             });
+//         } else if (navLinks[i].getAttribute('href') === './LOGIN/login.html') {     // Kiểm tra nếu liên kết có href là "./LOGIN/login.html"
+//             navLinks[i].addEventListener('click', function () {                     // thì chuyển hướng trang khi nhấp chuột vào liên kết.
+//                 window.location.href = './LOGIN/login.html';
+//             });
+//         } else {
+//             // Thực hiện cuộn đến phần tử tương ứng khi nhấp chuột vào các liên kết khác
+//             navLinks[i].addEventListener('click', scrollToSection);
+//         }
+//     }
+// });
 
 // Cuộn đến phần tử tương ứng khi nhấp chuột vào liên kết trong thanh điều hướng
 function scrollToSection(event) {

@@ -16,7 +16,7 @@
   --purple-grad: linear-gradient(to right, #bb71d7, #d9717c);
   --orange-grad: linear-gradient(to right, #f3a56b, #f3c76b);;
 
-  --header-height: 104px;
+  --header-height: 100px;
 }
 
 * {
